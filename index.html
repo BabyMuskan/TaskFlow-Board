@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Agile Board</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>TaskFlow Agile Board</h1>
+    </header>
+
+    <main class="kanban-board">
+        <!-- To Do Column -->
+        <section class="kanban-column" data-status="todo">
+            <h2>To Do</h2>
+            <div class="task-container" id="todo-container"></div>
+        </section>
+
+        <!-- In Progress Column -->
+        <section class="kanban-column" data-status="inprogress">
+            <h2>In Progress</h2>
+            <div class="task-container" id="inprogress-container"></div>
+        </section>
+
+        <!-- Done Column -->
+        <section class="kanban-column" data-status="done">
+            <h2>Done</h2>
+            <div class="task-container" id="done-container"></div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
