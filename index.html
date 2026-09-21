@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Agile Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>TaskFlow Agile Board</h1>
+        <p>Manage your tasks efficiently</p>
+    </header>
+
+    <!-- Task Input Form -->
+    <section class="form-container">
+        <form id="task-form">
+            <input type="text" id="task-title" placeholder="Task Title..." required>
+            <input type="text" id="task-desc" placeholder="Task Description...">
+            <select id="task-status">
+                <option value="Todo">To Do</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Done">Done</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+    </section>
+
+    <main class="board-container">
+        <!-- Todo Column -->
+        <div class="column" id="todo-column">
+            <h2>To Do</h2>
+            <div class="task-list" id="todo-list"></div>
+        </div>
+
+        <!-- In Progress Column -->
+        <div class="column" id="inprogress-column">
+            <h2>In Progress</h2>
+            <div class="task-list" id="inprogress-list"></div>
+        </div>
+
+        <!-- Done Column -->
+        <div class="column" id="done-column">
+            <h2>Done</h2>
+            <div class="task-list" id="done-list"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
