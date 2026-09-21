@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.kanban-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kanban-column {
+    background-color: #ebecf0;
+    border-radius: 8px;
+    padding: 15px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.kanban-column h2 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #172b4d;
+}
+
+.task-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Task Card Styling */
+.task-card {
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    cursor: grab;
+    user-select: none;
+}
+
+.task-card:active {
+    cursor: grabbing;
+}
+
+/* Dragging visual states */
+.task-card.dragging {
+    opacity: 0.4;
+}
+
+.kanban-column.drag-over {
+    background-color: #dfe1e6;
+    border: 2px dashed #0079bf;
+}
