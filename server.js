@@ -72,8 +72,11 @@ const MONGO_URI = process.env.MONGO_URI;
 
 mongoose.connect(MONGO_URI)
   .then(() => {
+   if (process.env.NODE_ENV !== 'production') {
     app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
     });
+}
   })
   .catch((err) => {
     console.error('Database connection error:', err.message);
